@@ -14,7 +14,7 @@ public class Creator {
     }
 
     public File fileCreator (String path) {
-        File file = new File("C://Users//Эльдар//Games//src//main//Utils.java");
+        File file = new File(path);
         try{
             file.createNewFile();
         } catch (IOException e) {
@@ -23,7 +23,7 @@ public class Creator {
         return file;
     }
     public StringBuilder createRecorder(File file) throws IOException {
-        if(file.mkdir()) {
+        if(file.exists()) {
             stringBuilder.append("Folder/File ")
                     .append(file)
                     .append(" is created")
